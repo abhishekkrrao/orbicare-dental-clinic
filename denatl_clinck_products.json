@@ -1,0 +1,42 @@
+[
+    {
+        "product": "Teeth whitening",
+         "image":"horizontal/teeth_whiting.jpg",
+         "description":""
+    },
+    {
+        "product": "implants",
+         "image":"horizontal/implants.png",
+         "description":""
+    },
+    {
+        "product": "laser",
+         "image":"horizontal/laser.jpg",
+         "description":""
+    },
+    {
+        "product": "teeth bleaching",
+         "image":"horizontal/teeth_bleaching.jpg",
+         "description":""
+    },
+    {
+        "product": "fillings",
+         "image":"horizontal/fillings.jpg",
+         "description":""
+    },
+    {
+        "product": "scaling",
+         "image":"horizontal/scaling.jpg",
+         "description":""
+    },
+    {
+        "product": "invisible braces",
+         "image":"horizontal/invisiblebraces.jpg",
+         "description":""
+    },
+    {
+        "product": "braces",
+         "image":"horizontal/braces.jpg",
+         "description":""
+    }
+]

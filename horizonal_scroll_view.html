@@ -1,0 +1,250 @@
+<section id="gallery" class="gallery-section">
+    <div class="gallery-intro">
+        <div>
+            <span class="gallery-label">OrbiCare Dental Clinic</span>
+            <h2>Our Clinic Moments</h2>
+            <p>Explore the atmosphere, care spaces, and smile stories from our clinic.</p>
+        </div>
+        <div class="gallery-actions">
+            <span class="gallery-info"></span>
+        </div>
+    </div>
+
+    <div class="gallery-grid">
+        <button type="button" class="gallery-card" data-image="gallery/1.png" data-caption="Patient comfort lounge">
+            <img src="gallery/1.png" alt="Patient comfort lounge">
+            <div class="gallery-card-overlay">Patient comfort lounge</div>
+        </button>
+        <button type="button" class="gallery-card" data-image="gallery/2.png" data-caption="Modern dental suite">
+            <img src="gallery/2.png" alt="Modern dental suite">
+            <div class="gallery-card-overlay">Modern dental suite</div>
+        </button>
+        <button type="button" class="gallery-card" data-image="gallery/3.jpg" data-caption="Advanced treatment setup">
+            <img src="gallery/3.jpg" alt="Advanced treatment setup">
+            <div class="gallery-card-overlay">Advanced treatment setup</div>
+        </button>
+        <button type="button" class="gallery-card" data-image="gallery/4.jpg" data-caption="Friendly clinic environment">
+            <img src="gallery/4.jpg" alt="Friendly clinic environment">
+            <div class="gallery-card-overlay">Friendly clinic environment</div>
+        </button>
+        <button type="button" class="gallery-card" data-image="gallery/5.jpg" data-caption="Patient care moment">
+            <img src="gallery/5.jpg" alt="Patient care moment">
+            <div class="gallery-card-overlay">Patient care moment</div>
+        </button>
+        <button type="button" class="gallery-card" data-image="gallery/c.png" data-caption="Relaxing consultation area">
+            <img src="gallery/c.png" alt="Relaxing consultation area">
+            <div class="gallery-card-overlay">Relaxing consultation area</div>
+        </button>
+    </div>
+</section>
+
+<style>
+.gallery-section {
+    padding: 4rem 2rem;
+    background: #f8fbff;
+}
+
+.gallery-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+}
+
+.gallery-label {
+    display: inline-block;
+    background: rgba(0, 102, 204, 0.12);
+    color: #0057a3;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-intro h2 {
+    font-size: clamp(2rem, 2.5vw, 2.6rem);
+    margin-bottom: 0.6rem;
+}
+
+.gallery-intro p {
+    max-width: 680px;
+    color: #4b5563;
+    line-height: 1.75;
+}
+
+.gallery-actions {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-info {
+    color: #0a0e27;
+    font-weight: 600;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+    padding: 0;
+    min-height: 220px;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(6, 34, 87, 0.82) 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.gallery-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 16, 47, 0.82);
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    z-index: 9999;
+    backdrop-filter: blur(6px);
+}
+
+.gallery-modal {
+    width: min(100%, 980px);
+    max-height: min(100vh, 90vh);
+    background: #0f172a;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-modal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: calc(90vh - 60px);
+    object-fit: contain;
+    background: #0f172a;
+}
+
+.gallery-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.gallery-modal-close:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 860px) {
+    .gallery-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .gallery-intro {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .gallery-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card {
+        min-height: 200px;
+    }
+}
+</style>
+
+<script>
+(function () {
+    const galleryRoot = document.getElementById('gallery');
+    if (!galleryRoot) {
+        return;
+    }
+
+    galleryRoot.addEventListener('click', function (event) {
+        const card = event.target.closest('.gallery-card');
+        if (!card) {
+            return;
+        }
+
+        const imageUrl = card.dataset.image;
+        const caption = card.dataset.caption || 'Gallery image';
+        if (!imageUrl) {
+            return;
+        }
+
+        const overlay = document.createElement('div');
+        overlay.className = 'gallery-modal-overlay';
+        overlay.innerHTML = `
+            <div class="gallery-modal">
+                <button class="gallery-modal-close" aria-label="Close gallery view">&times;</button>
+                <img src="${imageUrl}" alt="${caption}">
+            </div>`;
+
+        overlay.addEventListener('click', function (closeEvent) {
+            if (closeEvent.target === overlay || closeEvent.target.closest('.gallery-modal-close')) {
+                overlay.remove();
+            }
+        });
+
+        document.body.appendChild(overlay);
+    });
+})();
+</script>
